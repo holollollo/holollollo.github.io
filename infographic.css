@@ -1,0 +1,381 @@
+@charset "utf-8";
+
+/* 폰트 */
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
+    font-display: swap;
+}  
+@font-face {
+    font-family: 'IAMAPLAYER';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* 초기화 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+table { border-collapse: collapse; width: 100%; }
+ol, ul { list-style: none; }
+a { text-decoration: none; color: #111; }
+address { font-style: normal; }
+
+body {
+    font-family: 'GmarketSans';
+    line-height: 1.2;
+    color: #111;
+}
+
+/* 시작 */
+.inner {
+    width: 1400px;
+    margin: 0 auto;
+}
+body {
+    background-color: #203c7d;
+}
+#wrap {
+    width: 100%;
+    padding: 50px 0 0;
+}
+
+/* 헤더 */
+#header h1 {
+    float: right;
+    color: #fff;
+    font-size: 45px;
+}
+
+#window_back {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    top: 60px;
+}
+
+/* 창 배경 통합 */
+.windows {
+    position: absolute;
+    width: 25%;
+    border: 3px solid #000;
+    background-color: #dce7f7;
+}
+.windows .title {
+    background-color: #446dab;
+    height: 40px;
+    padding: 8px 20px;
+    border-bottom: 3px solid #000;
+    vertical-align: middle;
+    font-family: 'IAMAPLAYER';
+}
+.windows .title::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.windows .title h2 {
+    float: left;
+    color: #fff;
+    font-size: 20px;
+}
+.windows .title .title_img {
+    float: right;
+    margin-top: 4px;
+}
+.windows .content {
+    font-size: 22px;
+}
+
+/* 프로필 */
+#profile {
+    position: absolute;
+    width: 22%;
+    height: 100%;
+}
+#profile .profile_img {
+    padding: 30px 40px;
+}
+#profile .profile_img img {
+    width: 90%;
+}
+#profile .info {
+    padding: 0 25px 50px;
+}
+#profile .info li {
+    margin-bottom: 15px;
+}
+#profile .info li {
+    font-weight: 300;
+}
+#profile .info li span {
+    display: inline-block;
+    width: 89px;
+    font-weight: 500;
+}
+
+/* 성격 */
+#personality {
+    position: absolute;
+    left: 330px;
+    width: 44%;
+}
+#personality .content {
+    padding: 20px 30px;
+}
+#personality .mbti_graph {
+    float: left;
+}
+#personality .mbti_graph li {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+#personality .mbti_graph li > div {
+    position: relative;
+    display: inline-block;
+    width: 240px;
+    height: 25px;
+    margin: 0 30px;
+    border: 2px solid #000;
+    background-color: #3f3f3f;
+    border-radius: 20px;
+    vertical-align: middle;
+}
+#personality .mbti_graph li > div > div {
+    position: absolute;
+    height: 25px;
+    top: -2px;
+    right: -3px;
+    border: 2px solid #000;
+    background-color: #8db3db;
+    border-radius: 20px;
+}
+#personality .mbti_graph .i {
+    width: 60%;
+}
+#personality .mbti_graph .s {
+    width: 90%;
+}
+#personality .mbti_graph .t {
+    width: 61%;
+    left: -3px;
+}
+#personality .mbti_graph .p {
+    width: 80%;
+}
+#personality .mbti_graph .a {
+    left: -3px;
+    width: 73%;
+}
+#personality .mbti_txt {
+    float: right;
+    padding-bottom: 20px;
+    font-weight: 300;
+}
+#personality .mbti_txt li {
+    margin-bottom: 11px;
+}
+
+/* 좋아하는 것 */
+#favorite {
+    position: absolute;
+    right: 0px;
+    width: 31%;
+    height: 87%;
+}
+#favorite .content {
+    padding: 30px 30px 0 40px;
+}
+#favorite .like_img li {
+    float: left;
+}
+#favorite .like_img li img {
+    width: 90%;
+}
+#favorite .like_img .bts {
+    float: left;
+    margin-left: 7px;
+}
+#favorite .like_img .harrypotter {
+    float: right;
+}
+#favorite .like_img .lostark {
+    float: right;
+    margin-top: 10px;
+}
+#favorite .like_img .day6 {
+    float: left;
+    margin-top: 35px;
+    margin-right: 50px;
+}
+#favorite .like_img .btgd {
+    float: right;
+    margin-top: 30px;
+}
+#favorite .like_img .blade {
+    float: right;
+    margin: 35px 40px 0 200px;
+}
+#favorite .like_img .cat {
+    float: right;
+    margin: 25px 0 40px 0;
+}
+
+
+/* 소웨스킬 */
+#swskills {
+    position: absolute;
+    left: 330px;
+    top: 340px;
+    width: 20%;
+    height: 57.5%;
+}
+#swskills .content {
+    padding: 30px 40px;
+}
+#swskills .content li {
+    position: relative;
+    width: 40%;
+    height: 70px;
+    float: left;
+    margin-right: 15%;
+    margin-bottom: 20px;
+    border: 3px solid #000;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+#swskills .content li:nth-of-type(2n) {
+    float: right;
+    margin-right: 0;
+}
+#swskills .content li:nth-of-type(5),
+#swskills .content li:nth-of-type(6) {
+    width: 100%;
+}
+#swskills .content li div {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 5px;
+    border-radius: 15px;
+}
+#swskills .ps div {
+    height: 60%;
+    background-color: #769dd3;
+}
+#swskills .ai div {
+    height: 80%;
+    background-color: #d1a877;
+}
+#swskills .pr div {
+    height: 90%;
+    background-color: #7576b6;
+}
+#swskills .ae div {
+    height: 70%;
+    background-color: #9a78b4;
+}
+#swskills .html div {
+    height: 80%;
+    background-color: #81c076;
+}
+#swskills .css div {
+    height: 80%;
+    background-color: #c7d178;
+    
+}
+
+
+/* 포트폴리오 */
+#portfolio {
+    position: absolute;
+    left: 640px;
+    top: 340px;
+    width: 38%;
+    height: 40%;
+}
+#portfolio .content {
+    padding: 25px 30px;
+}
+#portfolio li {
+    float: left;
+    width: 230px;
+    margin-bottom: 30px;
+}
+#portfolio li:nth-of-type(2n) {
+    margin-right: 0;
+}
+#portfolio h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+#portfolio a {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+#portfolio a:hover {
+    padding: 10px;
+    background-color: #203c7d;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* 푸터 */
+#footer {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    background-color: #191919;
+    border: 3px solid #000;
+}
+#footer .icon {
+    float: right;
+    padding: 10px 0;
+}
+#footer .icon li {
+    float: left;
+    padding-right: 25px;
+}
+#footer .icon li img {
+    margin-top: 10px;
+}
+#footer .icon li span {
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+}
